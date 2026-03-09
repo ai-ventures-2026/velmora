@@ -1,0 +1,503 @@
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+/* ---- Hero ---- */
+.about-hero {
+  position: relative;
+  padding: 12rem 0 8rem;
+  overflow: hidden;
+}
+
+.about-hero__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    #8b4a6b 0%,
+    #6d3855 40%,
+    #2d1a28 70%,
+    #1a1a1a 100%
+  );
+  z-index: 0;
+}
+
+.about-hero__bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 30%, rgba(201,169,110,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 40% at 10% 80%, rgba(139,74,107,0.3) 0%, transparent 60%);
+}
+
+.about-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.about-hero__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero__title em {
+  font-style: italic;
+  color: var(--rose-gold);
+}
+
+.about-hero .divider {
+  background: rgba(201,169,110,0.4);
+  margin: 1.5rem 0;
+}
+
+.about-hero__lead {
+  font-size: 1.05rem;
+  color: rgba(245,230,211,0.75);
+  max-width: 520px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ---- Philosophy ---- */
+.philosophy-section {
+  background: var(--white);
+}
+
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+.philosophy-title {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: var(--near-black);
+  margin-bottom: 0.5rem;
+}
+
+.philosophy-title em {
+  font-style: italic;
+  color: var(--rose-gold);
+}
+
+.philosophy-text p {
+  margin-bottom: 1.25rem;
+  color: var(--text-mid);
+}
+
+.philosophy-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  height: 420px;
+}
+
+.philosophy-card {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.philosophy-card--1 {
+  background: linear-gradient(145deg, #c9a96e, #a8824a);
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.philosophy-card--2 {
+  background: linear-gradient(145deg, #8b4a6b, #6d3855);
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.philosophy-card--3 {
+  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.philosophy-card__word {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.7);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Values ---- */
+.values-section {
+  background: var(--cream);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+}
+
+.value-card__icon {
+  font-size: 1.8rem;
+  color: var(--rose-gold);
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.value-card__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--near-black);
+  margin-bottom: 0.75rem;
+}
+
+.value-card__desc {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.75;
+}
+
+/* ---- Founder ---- */
+.founder-section {
+  background: var(--off-white);
+  padding: 7rem 0;
+}
+
+.founder-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+.founder-portrait__frame {
+  position: relative;
+}
+
+.founder-portrait__img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: linear-gradient(160deg,
+    #c9a96e 0%,
+    #a85e85 35%,
+    #8b4a6b 65%,
+    #6d3855 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-portrait__img::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 25% 15%, rgba(255,255,255,0.18) 0%, transparent 55%);
+}
+
+.founder-portrait__img::after {
+  content: 'C';
+  position: absolute;
+  bottom: -3rem;
+  right: -2rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.07);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.founder-portrait__quote-mark {
+  position: absolute;
+  top: -0.5rem;
+  left: -1.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 8rem;
+  color: var(--rose-gold);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.founder-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--near-black);
+  margin-bottom: 0.25rem;
+}
+
+.founder-subtitle {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rose-gold);
+  margin-bottom: 0;
+}
+
+.founder-text p {
+  color: var(--text-mid);
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.founder-pullquote {
+  border-left: 2px solid var(--rose-gold);
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0 0;
+  background: var(--cream);
+}
+
+.founder-pullquote p,
+.founder-pullquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--near-black);
+  line-height: 1.7;
+  margin: 0 0 0.5rem;
+}
+
+.founder-pullquote cite {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.1em;
+  color: var(--rose-gold);
+  display: block;
+}
+
+/* ---- Sustainability ---- */
+.sustainability-section {
+  background: var(--near-black);
+}
+
+.sustainability-section .overline {
+  color: var(--rose-gold);
+}
+
+.sustainability-section .section-title {
+  color: var(--white);
+}
+
+.sustainability-section .section-subtitle {
+  color: rgba(255,255,255,0.5);
+}
+
+.sustainability-section .divider {
+  background: rgba(201,169,110,0.4);
+}
+
+.sustainability-pillars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.sustainability-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(201,169,110,0.12);
+  padding: 2.5rem;
+  transition: background 0.4s, transform 0.4s;
+}
+
+.sustainability-card:hover {
+  background: rgba(255,255,255,0.07);
+  transform: translateY(-4px);
+}
+
+.sustainability-card__stat {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--rose-gold);
+  margin-bottom: 1rem;
+}
+
+.sustainability-card__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+
+.sustainability-card__desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+}
+
+/* ---- Certifications ---- */
+.certifications-section {
+  background: var(--white);
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.cert-card {
+  border: 1px solid var(--cream-dark);
+  padding: 2rem 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.cert-card:hover {
+  border-color: var(--rose-gold);
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-3px);
+}
+
+.cert-card__badge {
+  width: 36px;
+  height: 36px;
+  background: var(--rose-gold);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  border-radius: 50%;
+}
+
+.cert-card__name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: var(--near-black);
+  margin-bottom: 0.2rem;
+}
+
+.cert-card__body-text {
+  font-family: 'Jost', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--rose-gold);
+  margin-bottom: 0.6rem;
+}
+
+.cert-card__desc {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+
+/* ---- CTA ---- */
+.about-cta-section {
+  position: relative;
+  padding: 7rem 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.about-cta-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    #1a1a1a 0%,
+    #8b4a6b 50%,
+    #c9a96e 100%
+  );
+  z-index: 0;
+}
+
+.about-cta-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-cta-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  line-height: 1.15;
+}
+
+.about-cta-title em {
+  font-style: italic;
+  color: var(--cream);
+}
+
+.about-cta-section .divider {
+  background: rgba(255,255,255,0.3);
+}
+
+.about-cta-desc {
+  color: rgba(255,255,255,0.7);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.about-cta-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .philosophy-visual {
+    height: 280px;
+  }
+  .founder-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .founder-portrait__img {
+    aspect-ratio: 4/3;
+  }
+  .sustainability-pillars {
+    grid-template-columns: 1fr;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+}
